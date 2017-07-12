@@ -10,17 +10,17 @@ contract CCProject {
     }
     
     struct Car{
-        address adres;  //адрес счёта
-        uint8 carType;  //тип машины
-        uint16 number;  //номер машины
-        int balance;    //баланс счёта
-        uint sum;       //общая сумма счёта за все время
-        bool wasFine;   //был ли штраф
+        address adres;  //Г Г¤Г°ГҐГ± Г±Г·ВёГІГ 
+        uint8 carType;  //ГІГЁГЇ Г¬Г ГёГЁГ­Г»
+        uint16 number;  //Г­Г®Г¬ГҐГ° Г¬Г ГёГЁГ­Г»
+        int balance;    //ГЎГ Г«Г Г­Г± Г±Г·ВёГІГ 
+        uint sum;       //Г®ГЎГ№Г Гї Г±ГіГ¬Г¬Г  Г±Г·ВёГІГ  Г§Г  ГўГ±ГҐ ГўГ°ГҐГ¬Гї
+        bool wasFine;   //ГЎГ»Г« Г«ГЁ ГёГІГ°Г Гґ
     }
     
-    Car[] cars; //массив структур типа Car
+    Car[] cars; //Г¬Г Г±Г±ГЁГў Г±ГІГ°ГіГЄГІГіГ° ГІГЁГЇГ  Car
     
-    function main(uint16 number, uint8 route){ //главная функция
+    function main(uint16 number, uint8 route){ //ГЈГ«Г ГўГ­Г Гї ГґГіГ­ГЄГ¶ГЁГї
         uint8 i = 0;
         while (cars[i].number != number){
             i++;
@@ -28,7 +28,7 @@ contract CCProject {
         cars[i].balance -= operation(route, cars[i].carType, cars[i].wasFine);
     }
     
-    function() payable{ //функция для получения денег
+    function() payable{ //ГґГіГ­ГЄГ¶ГЁГї Г¤Г«Гї ГЇГ®Г«ГіГ·ГҐГ­ГЁГї Г¤ГҐГ­ГҐГЈ
         uint8 i = 0;
         while (cars[i].adres != msg.sender){
             i++;
